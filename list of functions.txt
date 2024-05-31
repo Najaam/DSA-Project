@@ -1,0 +1,20 @@
+linearsearch(arr, size, 5);
+binarysearch(arr1, size, 5);
+JumpSearch(arr1, size, 1);
+ShellSort(arr, size);
+PrintArray(arr, size);
+mergeSort(arr, 0, size-1);
+insertion_sort(arr, size);
+Selection_sort(arr, size);
+Bubble_sort(arr, size);
+QuickSort(arr, 0, size-1);
+heapsort(arr, size);
+
+LinkedList<int> intList;
+intList.insertAtBeginning(10);
+intList.insertAtEnd(20);
+intList.insertAtPosition(15, 1);
+intList.insertAtPosition(5, 0);
+intList.insertAtPosition(25, 4); 
+intList.writeToFile("linked_list.txt");
+intList.readFromFile("linked_list.txt");
