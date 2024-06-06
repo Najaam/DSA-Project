@@ -98,16 +98,20 @@ namespace MyLibrary
 	//Shell Sort
 	void ShellSort(int array[], int n){
 		cout<<"Shell Sort: ";
-		for(int gap=n/2; gap>0; gap/=2){
-			for(int i=gap; i<n; i++){
-				int temp=array[i];
-				int j;
-				for(j=i; j>=gap && array[j-gap]>temp; j-=gap){
-					array[j]=array[j-gap];
-				}
-				array[j]=temp;
-			}
-		}
+		 for(int gap=n/2; gap>=1; gap/=2){
+        for(int j=gap; j<n; j++){
+            for(int i=j-gap; i>=0; i-=gap){
+                if(array[i+gap]>array[i]){
+                    break;
+                } else{
+                    int temp;
+                    temp=array[i+gap];
+                    array[i+gap]=array[i];
+                    array[i]=temp;
+                }
+            }
+        }
+    }
 	}
 	
 	//Bubble Sort
